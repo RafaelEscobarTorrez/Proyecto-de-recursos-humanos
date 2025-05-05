@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script type="module">
+        import {calcularCostoTotal} from './ResumenCostos.js';
+        import {calcularIngredientes} from './CalcularIngredientes.js';
+        import {calcularFechaFinal} from './CalendarioProduccion.js';
+        import {produccionPorMes} from './ProduccionMensual.js';
+
+        const recetaGoldenAle = [
+            { nombre: "Malta Pilsner", cantidadBase: 5 }, // 5kg por 100L
+            { nombre: "Lúpulo Cascade", cantidadBase: 0.15 }, // 150g por 100L
+            { nombre: "Levadura", cantidadBase: 0.05 },
+            { nombre: "Agua", cantidadBase: 110 }
+        ];
+        
+        const lote = 100; // Lote es la cantidad de litros que se desea preparar
+
+        const calcIngredientes = calcularIngredientes(lote, recetaGoldenAle);
+        console.log(calcIngredientes);
+
+
+        const ingredientes = [
+            { nombre: "Malta", cantidad: 5, precioUnitario: 200 }, // por kg
+            { nombre: "Lúpulo", cantidad: 0.2, precioUnitario: 1500 } // por kg
+        ];
+
+  
+        console.log("Costo total: Bs." + calcularCostoTotal(ingredientes));
+
+        const lotes1 = [
+            { nombre: "Golden Ale", fechaInicio: "2025-04-01", diasFermentacion: 10 },
+            { nombre: "IPA", fechaInicio: "2025-04-05", diasFermentacion: 14 }
+        ];
+  
+        lotes1.forEach(lote => {
+            console.log(`${lote.nombre}: termina el ${calcularFechaFinal(lote)}`);
+        });
+
+        const lotes2 = [
+            { nombre: "Golden Ale", litros: 250, fecha: "2025-01-15" },
+            { nombre: "IPA", litros: 300, fecha: "2025-01-22" },
+            { nombre: "Lager", litros: 200, fecha: "2025-02-10" }
+        ];
+
+        console.log(produccionPorMes(lotes2));
+
+    </script>
+    
+</body>
+</html>

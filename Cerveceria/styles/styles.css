@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    background: #f3e2c7;
+    color: #333;
+}
+
+aside input, aside button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+aside button {
+  background-color: #c88f47;
+  color: white;
+  cursor: pointer;
+}
+#content {
+  flex: 1;
+  padding: 20px 20px 0px 20px;
+  background: #f7ebd9;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section {
+  margin-top: 30px;
+  background: #f3dcb8;
+  padding: 20px;
+  border-radius: 10px;
+}
+.production-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.production-list th, .production-list td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+.settings input[type="checkbox"] {
+  transform: scale(1.2);
+}
+.ingredients {
+  display: flex;
+  gap: 40px;
+  text-align: center;
+  margin-top: 20px;
+}
+.ingredients div {
+  font-size: 18px;
+}
+
+
+/*Mod Zeke*/
+
+/*Aside Profile*/
+
+aside .profile{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside .profile img.profile-img{
+  width: 80%;
+  padding: 30px;
+}
+
+aside .profile h2{
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+/*Aside - Nav*/
+aside {
+    width: 250px;
+    background: #4b392f;
+    color: white;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+aside nav {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside nav a {
+    width: 80%;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #614e45;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+aside nav a:hover {
+    background-color: #6d5245;
+    border: 1px solid white;
+}
+
+aside nav a.logout {
+    background-color: #be0000;
+    color: white;
+    width: 80%;
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+aside nav a.logout:hover {
+    background-color: #d14848;
+}
+a#btn {
+    background-color: #c88f47;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+a#btn:hover {
+    background-color: #b67c3a;
+}
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #c88f47;
+}
